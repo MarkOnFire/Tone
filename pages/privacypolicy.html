@@ -14,15 +14,15 @@
 {# This sets our page <title>. It will append this privacypolicy's name to the site title defined in base.html #}
 {% block title %}{% parent %} - Privacy Policy{% endblock %}
 {% block content %}
-
+<div class="article-content-area">
 <section class="content" id="storyContent">
-  <article>
+  <article class="article-content-area">
     <h1>Privacy Policy</h1>
-    <p>{{ sitedata.privacy_policy|safe }} </p>
-    <p>Questions? <a href="mailto:{{ sitedata.email|safe }}">Contact us.</a></p>
-    <p class="dates">last updated: {{ item.last_updated|date('F d, Y @ g:i a') }}</p>
+    <p>{{ cms.sitedata.privacy_policy|safe }} </p>
+    <p>Questions? <a href="mailto:{{ cms.sitedata.email|safe }}">Contact us.</a></p>
   </article>
-
+</section>
+</div>
 
 
 {% endblock %}
