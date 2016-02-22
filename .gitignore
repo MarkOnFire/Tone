@@ -3,9 +3,9 @@
 package.json
 .build/**
 options/**
-node_modules/**
+++node_modules/**
 tasks/**
-libs/**
+++libs/**
 
 **.sw*
 
