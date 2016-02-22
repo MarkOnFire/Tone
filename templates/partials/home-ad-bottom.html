@@ -1,11 +1,12 @@
-
 <div class="ad-container">
   <div class="ad-heading">
-    <span class="ad-heading-text">{{cms.advertising.home_bottom.name}}</span>
-    <div class="ad-image-container" style="background-image: url({{cms.advertising.article_top.image|imageSize(100)}})"></div>
+    <span class="ad-heading-text">{{cms.advertising.home-bottom.name}}</span>
+    <span class="ad-image-container">
+      <img src="{{cms.advertising.home-bottom.image|imageSize(100)}}" />
+    </span>
   </div>
   <div class="ad-body">
-    <div class="body-heading">{{cms.advertising.article_top.text_of_ad}}</div>
-    <div class="body-content">{{cms.advertising.article_top.content_of_ad}}</div>
+    <div class="body-heading">{{cms.advertising.home-bottom.text_of_ad}}</div>
+    <div class="body-content">{{cms.advertising.home-bottom.content_of_ad}}</div>
   </div>
 </div>

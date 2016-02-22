@@ -12,32 +12,17 @@
 {# You can copy/paste this line to any page on your site to access the privacypolicy data. #}
 {% set item = get('privacypolicy') %}
 {# This sets our page <title>. It will append this privacypolicy's name to the site title defined in base.html #}
-{% block title %}{% parent %} - {{ item.name }}{% endblock %}
+{% block title %}{% parent %} - Privacy Policy{% endblock %}
 {% block content %}
-  <h1>{{ item.name }}</h1>
-  <ul>
-      <li>
-        <strong>Name: </strong>
-        {{ item.name }}
-      </li>
-      <li>
-        <strong>Create Date: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ item.create_date|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Last Updated: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ item.last_updated|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Publish Date: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ item.publish_date|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Text of Policy: </strong>
-        {{ item.text_of_policy }}
-      </li>
-  </ul>
+<div class="article-content-area">
+<section class="content" id="storyContent">
+  <article class="article-content-area">
+    <h1>Privacy Policy</h1>
+    <p>{{ cms.sitedata.privacy_policy|safe }} </p>
+    <p>Questions? <a href="mailto:{{ cms.sitedata.email|safe }}">Contact us.</a></p>
+  </article>
+</section>
+</div>
+
+
 {% endblock %}

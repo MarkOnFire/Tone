@@ -56,16 +56,21 @@
 
       <!--byline-->
       {% for relation in item.authors %}
+
+        <i fa-play>
         <h5 class="byline-author">
           {{ relation.name }}
         </h5>
         {% if relation.twitter %}
           <a href="https://twitter.com/{{ relation.twitter }}" class="byline-link"> @{{ relation.twitter }} </a>
         {% endif %}
+<<<<<<< HEAD
+=======
 
         {% if item.authors.length > 1 && item.authors[forloop.index] !== relation %}
           <span class="author-divider">/</span>
         {% endif %}
+>>>>>>> hot_fixes
       {% endfor %}
 
       <h5 class="dates">{{ item.publish_date|date('F d, Y @ g:i a') }}</h5>
@@ -74,11 +79,13 @@
 
       <span class="photo-caption">{{item.photo_caption|safe}}</span>
 
+      <h3 class="relation-type">
       {% for relation in item.tags %}
         <a href="{{url(relation)}}">
-          <h3 class="relation-type">{{relation.name}}</h3>
+          {{relation.name}}
         </a>
       {% endfor %}
+      </h3>
 
 
       <h2>{{ item.subhead }}</h2>
