@@ -83,4 +83,8 @@ static/css/mediaelementplayer.css
 static/css/mejs-skins.css
 static/css/skel.css
 
+<<<<<<< HEAD
 libs/.firebase-custom.conf.jst
+=======
+node_modules/
+>>>>>>> hot_fixes
