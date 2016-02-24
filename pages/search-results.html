@@ -15,6 +15,7 @@
       border-bottom: solid 1px #ccc;
       padding: 10px 0px;
     }
+
     .wh-search-results dd {
       margin-left: 0;
     }
@@ -49,14 +50,12 @@
                   <div id="tipue_search_content"></div>
                </article>
 
-
-
 {% endblock %}
 
 {% block scripts_extra %}
     {# DO NOT MINIFY THIS FILE #}
     <script src="/.wh/searchjson.js"></script>
-    <script src="http://cms.webhook.com/cdn/js/webhook-tipue.min.js"></script>
+    <script src="/static/javascript/webhook-tipue.min.js"></script>
 
     <script>
     $(document).ready(function() {
